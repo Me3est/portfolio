@@ -1,0 +1,133 @@
+html {
+    overflow: hidden;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#section1 {
+    background:linear-gradient(#DEF5E5, #BCEAD5);
+}
+#section2 {
+    background:linear-gradient(#BCEAD5, #9ED5C5);
+}
+#section3 {
+    background:linear-gradient(#9ED5C5, #8EC3B0);
+}
+#section4 {
+    background:linear-gradient(#8EC3B0,#DEF5E5);
+}
+.indicator {
+    position: fixed;
+    bottom: 35px;
+    left: 40px;
+}
+.indi_bar {
+    color: rgb(104, 103, 103);
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.indi_active {
+    color: #fff;
+    font-size: 45px;
+}
+/* section1 */
+.click_box {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: move 0.7s infinite;
+}
+@keyframes move {
+    0% {top: 48%;}
+    15% {top:47%;}
+    25% {top: 46%;}
+    50% {top: 45%;}
+    65% {top: 46%;}
+    75% {top: 48%;}
+    100% {top: 50%;}
+}
+.click_box p {
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+}
+.intro_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+/* section2 */
+.skills_box {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+fieldset {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    box-sizing: border-box;
+}
+.list_box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.skill {
+    width: 200px;
+}
+
+.img_click_box {
+    width:100%;
+    position: relative;
+    text-align: center;
+}
+.img_click_box img {
+    height: 100px;
+    text-align: center;
+}
+.skill_box {
+    display: flex;
+    margin: 20px 0;
+    gap: 10px;
+}
+.skill_bar_box {
+    width:170px;
+    height: 25px;
+    background: #ddd;
+    border-radius: 5px;
+    
+}
+.skill_bar {
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    border-radius: 5px;
+
+}
+.count {
+
+}
+.display1 {display: block;}
