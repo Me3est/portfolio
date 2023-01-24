@@ -50,6 +50,16 @@ html, body {
     bottom: 28%;
     right: 6%;
     transform:scaleX(-1);
+    animation: bird 0.8s linear infinite;
+}
+@keyframes bird {
+    0% {bottom: 28%;}
+    15% {bottom:27%;}
+    25% {bottom: 26%;}
+    50% {bottom: 25%;}
+    65% {bottom: 26%;}
+    75% {bottom: 27%;}
+    100% {bottom: 28%;}
 }
 .butterfly {
     width: 50px;
@@ -58,6 +68,16 @@ html, body {
     bottom: 20%;
     right: 20%;
     transform: scaleX(-1);
+    animation: butterfly 5s linear infinite;
+}
+@keyframes butterfly {
+    0% {right: 28%;}
+    15% {right:26%; bottom: 21%;}
+    25% {right: 26%;}
+    50% {right: 25%;}
+    65% {right: 26%; bottom: 22%;}
+    75% {right: 27%;}
+    100% {right: 28%; bottom: 20%;}
 }
 .sun {
     width: 300px;
@@ -66,7 +86,7 @@ html, body {
     top: -3%;
     left: -8%;
     z-index: 9999;
-    animation: sun 3s infinite;
+    animation: sun 3s linear infinite;
 }
 @keyframes sun {
     0% {rotate: 0deg;}
@@ -75,19 +95,51 @@ html, body {
     75% {rotate: 270deg;}
     100% {rotate: 360deg;}
 }
-.cloud1 {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: -3%;
-    right: 46%;
-}
 .cloud2 {
     width: 200px;
     height: 200px;
     position: absolute;
-    top: 5%;
+    top: 7%;
     right: 8%;
+    animation: cloud2 9s linear infinite;
+}
+@keyframes cloud2 {
+    0% {right: 8%; top:7%;}
+    10% {right: 28%; top: 1%;}
+    20% {right: 46%; top: 7%;}
+    30% {right: 64%; top: 1%;}
+    40% {right: 75%; top: 7%;}
+    50% {right: 80%; top: 1%;}
+    60% {right: 75%;top: 7%;}
+    70% {right: 64%;top: 1%;}
+    80% {right: 46%;top: 7%;}
+    90% {right: 28%;top: 1%;}
+    100% {right: 8%; top:7%;}
+}
+.door1 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* animation: cloud2 9s linear infinite; */
+}
+.door2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    /* animation: cloud2 9s linear infinite; */
+}
+.door1:hover {
+    display: none;
+}
+.door1:hover .door2 {
+    /* display: block; */
 }
 .click_box {
     width: 200px;
@@ -96,7 +148,7 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: move 0.7s infinite;
+    animation: move 0.7s linear infinite;
 }
 
 @keyframes move {
@@ -105,8 +157,8 @@ html, body {
     25% {top: 46%;}
     50% {top: 45%;}
     65% {top: 46%;}
-    75% {top: 48%;}
-    100% {top: 50%;}
+    75% {top: 47%;}
+    100% {top: 48%;}
 }
 .click_box p {
     margin: 0;

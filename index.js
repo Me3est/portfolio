@@ -40,6 +40,14 @@ $(document).ready(function() {
             $('.intro_box').fadeIn(50)
             setInterval(typing,200)
         })
+    // $('.door1').mouseenter(function() {
+    //     $('.door1').css({display:'none'})
+    //     $('.door2').css({display:'block'})
+    // })
+    // $('.door1').mouseleave(function() {
+    //     $('.door1').css({display:'block'})
+    //     $('.door2').css({display:'none'})
+    // })
 // section2 
     let img_box = $('.img_box')
     let skill = $('.skill')
@@ -52,7 +60,6 @@ $(document).ready(function() {
             }, 50)
         })
     }
-
     
 function count_up(i, num) {
     let tmp =0;
