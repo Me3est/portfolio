@@ -39,27 +39,28 @@ $(document).ready(function() {
             click_box.css({display:'none'})
             $('.intro_box').fadeIn(50)
             setInterval(typing,200)
+            $('.scroll_box').css({display:'block'})
         })
-    // $('.door1').mouseenter(function() {
-    //     $('.door1').css({display:'none'})
-    //     $('.door2').css({display:'block'})
-    // })
-    // $('.door1').mouseleave(function() {
-    //     $('.door1').css({display:'block'})
-    //     $('.door2').css({display:'none'})
-    // })
+    $('.click_box2').mouseenter(function() {
+        $('.door1').css({display:'none'})
+        $('.door2').css({display:'block'})
+    })
+    $('.click_box2').mouseleave(function() {
+        $('.door1').css({display:'block'})
+        $('.door2').css({display:'none'})
+    })
 // section2 
-    let img_box = $('.img_box')
+    // let img_box = $('.img_box')
     let skill = $('.skill')
-    for(let i=0; i<skill.length; i++) {
-        img_box.eq(i).click(function() {
-            img_box.eq(i).css({display:'none'})
-            $('.img_click_box').eq(i).addClass('display1')
-            $('.skill_bar').eq(i).animate({
-                width:'65%'
-            }, 50)
-        })
-    }
+    // for(let i=0; i<skill.length; i++) {
+    //     img_box.eq(i).click(function() {
+    //         img_box.eq(i).css({display:'none'})
+    //         $('.img_click_box').eq(i).addClass('display1')
+    //         $('.skill_bar').eq(i).animate({
+    //             width:'65%'
+    //         }, 50)
+    //     })
+    // }
     
 function count_up(i, num) {
     let tmp =0;
@@ -71,7 +72,7 @@ function count_up(i, num) {
         $('.img_click_box').eq(i).find('.skill_bar').css({
             width: tmp + "%"
         })
-        $('.img_click_box').eq(i).find('.count').text(tmp);
+        $('.img_click_box').eq(i).find('.count').text(tmp+"%");
         if(tmp >= num) {
             clearInterval(interval);
         }
@@ -84,7 +85,7 @@ function count_up(i, num) {
         if(sec2_top == s_top) {
             if(sec2_chk) {
                 sec2_chk = false;
-                let per = [95, 95, 90, 95, 80];
+                let per = [95, 95, 95, 80];
                 for(let i=0; i<skill.length; i++) {
                     count_up(i, per[i])
                 }
