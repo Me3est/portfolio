@@ -20,13 +20,14 @@ $(window).on("wheel", function(e) {
 })
 
 $(document).ready(function() {
+    history.scrollRestoration = "manual"
     let b_hei = $('.section');
     b_hei.eq(0).addClass('indi_active');
     $(window).scroll(function() { 
         let s_top = $(window).scrollTop();
         console.log(s_top)
         for(let i=0; i<$('.section').length; i++) {
-            if(s_top == b_hei.eq(i).offset().top) {
+            if(s_top >= b_hei.eq(i).offset().top) {
                 $('.indi_bar').removeClass('indi_active')
                 $('.indi_bar').eq(i).addClass('indi_active')
             }
