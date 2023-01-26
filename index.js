@@ -40,7 +40,7 @@ $(document).ready(function() {
         if(s_top >= $('#section3').offset().top) {
             $('.main_info').css({transform:'translateY(0)', opacity:'1'})
             $('.main_img').css({transform:'translateX(0)', opacity:'1'})
-            $('.sec3_title_box').css({left:'70%'})
+            $('.sec3_title_box').css({top:'10%'})
         }
         if(s_top >= $('#section4').offset().top) {
             $('.about_box').css({transform:'translateY(0)', opacity:'1'})
