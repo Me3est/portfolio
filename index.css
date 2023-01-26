@@ -37,13 +37,17 @@ html, body {
 #section3 {
     /* background:linear-gradient(#50bcdf, #ffa762); */
     background: #50bcdf;
+    font-family: '양진체';
 }
 #section4 {
     /* background:linear-gradient(#ffa762, #b13f02); */
     background: #d76427;
+    font-family: '양진체';
+    
 }
 #section5 {
-    background:#000
+    background:#000;
+    font-family: '양진체';
 }
 .welcome_box {
     position: absolute;
@@ -81,7 +85,7 @@ html, body {
     height: 150px;
     position: absolute;
     top: 4%;
-    right: 2%;
+    right: 100%;
     animation: cloud 10s 2s linear infinite;
 }
 @keyframes cloud {
@@ -89,11 +93,11 @@ html, body {
     100% {right:0%;}
 }
 .clouds {
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     position: absolute;
-    top: 0%;
-    right: 1%;
+    top: 4%;
+    right: 104%;
     animation: cloud 10s 2s linear infinite;
 }
 .forest {
@@ -540,11 +544,13 @@ html, body {
     transform: translateY(-50px);
     opacity: 0;
     transition: all 0.5s;
+    font-family: '양진체';
 }
 .main_title {
-    font-size: 60px;
+    font-size: 50px;
     color: #50bcdf;
     font-weight: 300;
+    margin: 10px 0;
 }
 .actv {
     font-size: 30px;
@@ -590,21 +596,22 @@ html, body {
     justify-content: space-evenly;
 }
 .tool {
-    width: 100px;
+    width: calc((100% - (1px * 5)) / 6);
     height: 50px;
     border: 2px solid #fff;
     box-sizing: border-box;
     text-align: center;
     color: #fff;
-    font-size: 18px;
-    line-height: 45px;
+    font-size: 13px;
+    line-height: 49px;
     border-radius: 10px;
 }
-.hTml {background-color: #e9854f;}
-.Css {background-color: #faed7a;}
-.JavaScript {background-color: #98db91;}
-.JquerY {background-color: #a680ff;}
-.MySql {background-color: #fdacbe;}
+.hTml {background-color: #f14a4a;}
+.Css {background-color: #f5873e;}
+.JavaScript {background-color: #d4d22f;}
+.JquerY {background-color: #a0ff48;}
+.MySql {background-color: #3060ff;}
+.giThub {background-color: #a352ff;}
 .contents {
     font-size: 24px;
     font-weight: bold;
@@ -658,7 +665,7 @@ html, body {
     height: 60px;
     margin: 10px auto;
     border-radius: 10px;
-    line-height: 60px;
+    line-height: 65px;
     font-size: 24px;
     color: #fff;
     text-align: center;
@@ -751,15 +758,15 @@ html, body {
     width: 110px;
     height:110px;
     position: absolute;
-    bottom: 20px;
-    right: 0;
+    bottom: 0;
+    right: 3%;
 }
 .smile {
     width: 30px;
     height: 30px;
     position: absolute;
-    bottom: 10%;
-    right: 5%;
+    bottom: 9%;
+    right: 8%;
     transform: scaleX(-1);
     opacity: 0;
     animation: smile 1.4s linear infinite;
@@ -960,12 +967,35 @@ html, body {
     color: #fff;
     font-size: 45px;
 }
+/* 인디케이터 반응형 */
+.indicator2 {
+    width: 100%;
+    height: 70px;
+    background: rgba(90, 90, 90, 0.096);
+    position: fixed;
+    top: 0;
+    display: none;
+    text-align: center;
+}
+.indi_bar2 {
+    width: 235px;
+    float: left;
+    height: 100%;
+    color: rgb(88, 88, 88);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 70px;
+    transition: all 0.5s;
+    font-family: '양진체';
+}
+.indi_active2 {
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+}
+@media screen and (max-width:1660px) {
+    .bicycle_img {display: none !important;}
+}
 @media screen and (max-width:1400px) {
-    .indicator {
-        position: fixed;
-        bottom: 25px;
-        left: 32px;
-    }
     .indi_bar {
         font-size: 23px;
     }
@@ -1000,5 +1030,18 @@ html, body {
     }
     .days_title {
         font-size: 21px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .sec2_img_box1 {
+        left: 12%;
+    }
+    .sec2_img_box2 {
+        position: absolute;
+        bottom: 12%;
+        right: 12%;
+    }
+    .about_box {
+        max-width: 1170px;
     }
 }

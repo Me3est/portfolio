@@ -31,11 +31,17 @@ $(document).ready(function() {
             if(s_top >= b_hei.eq(i).offset().top) {
                 $('.indi_bar').removeClass('indi_active')
                 $('.indi_bar').eq(i).addClass('indi_active')
+                $('.indi_bar2').removeClass('indi_active2')
+                $('.indi_bar2').eq(i).addClass('indi_active2')
             }
         }
         if(s_top >= $('#section1').offset().top) {
             $('.skills_box').css({transform:'translate(-50%, -50%)'})
             $('.sec2_title_box').css({left:'67%'})
+        }
+        if(s_top == $('#section2').offset().top || s_top == $('#section3').offset().top) {
+            $('.indicator').fadeOut(200, 'linear')
+            $('.indicator2').fadeIn(200, 'linear')
         }
         if(s_top >= $('#section3').offset().top) {
             $('.main_info').css({transform:'translateY(0)', opacity:'1'})
@@ -47,6 +53,8 @@ $(document).ready(function() {
         if(s_top >= $('#section4').offset().top) {
             $('.about_box').css({transform:'translateY(0)', opacity:'1'})
             $('.sec4_title').css({transform:'translateY(0)', opacity:'1'})
+            $('.indicator').fadeIn(200, 'linear')
+            $('.indicator2').fadeOut(200, 'linear')
         }
         if(s_top >= $('#section5').offset().top) {
             $('.contect').css({transform:'translate(-50%, -70%)', opacity:'1'})
