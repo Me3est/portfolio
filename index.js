@@ -22,7 +22,7 @@ $(window).load(function() {
     $('.indi_bar').css({opacity:'1'})
 })
 $(document).ready(function() {
-    history.scrollRestoration = "manual"
+    // history.scrollRestoration = "manual"
     let b_hei = $('.section');
     $(window).scroll(function() { 
         let s_top = $(window).scrollTop();
@@ -41,6 +41,8 @@ $(document).ready(function() {
             $('.main_info').css({transform:'translateY(0)', opacity:'1'})
             $('.main_img').css({transform:'translateX(0)', opacity:'1'})
             $('.sec3_title_box').css({top:'10%'})
+            // $('.bicycle_img').css({display:'block'})
+            $('.bicycle_img').fadeIn(1700, 'linear')
         }
         if(s_top >= $('#section4').offset().top) {
             $('.about_box').css({transform:'translateY(0)', opacity:'1'})
@@ -104,7 +106,7 @@ function count_up(i, num) {
         if(sec2_top == s_top) {
             if(sec2_chk) {
                 sec2_chk = false;
-                let per = [95, 95, 95, 80];
+                let per = [95, 95, 95, 95, 70, 80, 80];
                 for(let i=0; i<skill.length; i++) {
                     count_up(i, per[i])
                 }

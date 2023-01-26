@@ -63,6 +63,39 @@ html, body {
     100% { opacity: 0;}
 }
 /* section1 */
+.airplane {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 30%;
+    right: -10%;
+    transform: scaleX(-1);
+    animation: airplane 5s 2s linear infinite;
+}
+@keyframes airplane {
+    0% {right: -10%; top: 30%;}
+    100% {right: 100%; top: 3%;}
+}
+.cloud {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    animation: cloud 10s 2s linear infinite;
+}
+@keyframes cloud {
+    0% {right: 100%;}
+    100% {right:0%;}
+}
+.clouds {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0%;
+    right: 1%;
+    animation: cloud 10s 2s linear infinite;
+}
 .forest {
     position: absolute;
     bottom: -121px;
@@ -262,7 +295,7 @@ html, body {
 /* 이미지 */
 .sec2_img_box1 {
     position: absolute;
-    top: 26.5%;
+    top: 12%;
     left: 25%;
 }
 .flower1 {
@@ -299,7 +332,7 @@ html, body {
 }
 .sec2_img_box2 {
     position: absolute;
-    bottom: 26.5%;
+    bottom: 12%;
     right: 25%;
 }
 .flower5 {
@@ -340,7 +373,7 @@ html, body {
 }
 .sec2_title_box {
     position: absolute;
-    top: 26%;
+    top: 12%;
     left: 78%;
     transition: all 0.7s;
 }
@@ -400,12 +433,13 @@ html, body {
 .list_box {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     margin: 40px 0;
 }
 .skill {
-    width: 200px;
+    width:calc((100% - (20px * 3)) / 4);
 }
 .skill:hover {
     transform: translateY(-10px);
@@ -686,6 +720,7 @@ html, body {
     100% {transform: translateY(0px);}
 }
 .bicycle_img {
+    display: none;
     width: 150px;
     height: 70px;
     background: url(./img/icons8-bicycle-64.png) no-repeat center / contain;
