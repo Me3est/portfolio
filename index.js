@@ -22,7 +22,7 @@ $(window).load(function() {
     $('.indi_bar').css({opacity:'1'})
 })
 $(document).ready(function() {
-    // history.scrollRestoration = "manual"
+    history.scrollRestoration = "manual"
     let b_hei = $('.section');
     $(window).scroll(function() { 
         let s_top = $(window).scrollTop();
@@ -56,7 +56,7 @@ $(document).ready(function() {
         click_box.click(function() {
             click_box.css({display:'none'})
             $('.intro_box').fadeIn(50)
-            setInterval(typing,200)
+            setInterval(typing,150)
             $('.scroll_box').css({display:'block'})
         })
     $('.click_box2').mouseenter(function() {
