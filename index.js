@@ -1,21 +1,76 @@
 // 원페이지 스크롤 이벤트
-window.addEventListener("wheel", function(e){
-	e.preventDefault();
-},{passive : false});
-var main_html = $("html");
-var page = 1;
-$(window).on("wheel", function(e) {
-    if(main_html.is(":animated")) return;
-    if(e.originalEvent.deltaY > 0) {
-        if(page == 5) return;
-        page++; 
-    } else if(e.originalEvent.deltaY < 0) {
-        if(page == 1) return;
-        page--;
-    }
-    var posTop =(page-1) * $(window).height();
-    main_html.animate({scrollTop : posTop});
-})
+var scroll = function(){
+    
+    var $nav = null,
+        $cnt = null,
+        moveCnt = null,
+        moveIndex = 0,
+        moveCntTop = 0,
+        winH = 0,
+        time = false; // 새로 만든 변수
+  
+    $(document).ready(function(){
+        init();
+        initEvent();
+    });
+    
+    var init = function(){
+        $cnt = $(".section");
+        $nav = $(".indicator a");
+    };
+    
+    var initEvent = function(){
+        $("html ,body").scrollTop(0);
+        winResize();
+        $(window).resize(function(){
+            winResize();
+        });
+        $nav.on("click", function(){
+            moveIndex = $(this).parent("li").index();
+            moving(moveIndex);
+            return false;
+        });
+        $cnt.on("mousewheel", function(e){
+            if(time === false){ // time 변수가 펄스일때만 휠 이벤트 실행
+              wheel(e);
+            }
+        });
+    };
+        
+    var winResize = function(){
+        winH = $(window).height();
+        $cnt.height(winH);
+        $("html ,body").scrollTop(moveIndex.scrollTop);
+    };
+    
+    var wheel = function(e){
+        if(e.originalEvent.wheelDelta < 0){
+            if(moveIndex < 4){
+                moveIndex += 1;
+                moving(moveIndex);
+            };
+        }else{
+            if(moveIndex > 0){
+                moveIndex -= 1;
+                moving(moveIndex);
+            };
+        };
+    };
+    
+    var moving = function(index){
+        time = true // 휠 이벤트가 실행 동시에 true로 변경
+        moveCnt = $cnt.eq(index);
+        moveCntTop = moveCnt.offset().top;
+        $("html ,body").stop().animate({
+            scrollTop: moveCntTop
+        }, 700, function(){
+          time = false; // 휠 이벤트가 끝나면 false로 변경
+        });
+        $nav.parent("li").eq(index).addClass("indi_active").siblings().removeClass("indi_active");
+    };
+    
+  };
+  scroll();
 // 새로고침 이벤트
 $(window).load(function() {
     $('#section1').css({opacity:'1'})
@@ -23,20 +78,6 @@ $(window).load(function() {
 })
 // 본문 이벤트
 $(document).ready(function() {
-    // // 스크롤 부드럽게 이동
-    // let sec_h = $('.section').innerHeight()
-    //     $('.indi_bar a').click(function(){
-    //         event.preventDefault();
-    //         // preventDefault는 기본 이벤트를 실행하지 않게 한다.
-    //         // a태그의 경우 새로 로드하고 불러오는 기능을 안하게 막는다.
-
-    //         let href = $(this).attr('href');
-    //         let pos = $(href).offset().top;
-
-    //         $('html, body').animate({
-    //             scrollTop: pos - menu_h
-    //         }, 1000);
-    //     });
     history.scrollRestoration = "manual"
     // 인디케이터 스크롤 이벤트
     let b_hei = $('.section');
