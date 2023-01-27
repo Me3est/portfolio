@@ -23,20 +23,20 @@ $(window).load(function() {
 })
 // 본문 이벤트
 $(document).ready(function() {
-    // 스크롤 부드럽게 이동
-    let sec_h = $('.section').innerHeight()
-        $('.indi_bar a').click(function(){
-            event.preventDefault();
-            // preventDefault는 기본 이벤트를 실행하지 않게 한다.
-            // a태그의 경우 새로 로드하고 불러오는 기능을 안하게 막는다.
+    // // 스크롤 부드럽게 이동
+    // let sec_h = $('.section').innerHeight()
+    //     $('.indi_bar a').click(function(){
+    //         event.preventDefault();
+    //         // preventDefault는 기본 이벤트를 실행하지 않게 한다.
+    //         // a태그의 경우 새로 로드하고 불러오는 기능을 안하게 막는다.
 
-            let href = $(this).attr('href');
-            let pos = $(href).offset().top;
+    //         let href = $(this).attr('href');
+    //         let pos = $(href).offset().top;
 
-            $('html, body').animate({
-                scrollTop: pos
-            }, 1000);
-        });
+    //         $('html, body').animate({
+    //             scrollTop: pos - menu_h
+    //         }, 1000);
+    //     });
     history.scrollRestoration = "manual"
     // 인디케이터 스크롤 이벤트
     let b_hei = $('.section');
