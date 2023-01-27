@@ -826,6 +826,36 @@ html, body {
 .adu p:nth-child(2) {
     margin-top:10px;
 }
+.download {
+    width: 177px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    line-height: 163px;
+    position: relative;
+    text-align: center;
+}
+.check1 {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 39%;
+    left: -3px;
+}
+.check2 {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 39%;
+    left: -3px;
+    display: none;
+}
+.download:hover .check2{
+    display: block;
+}
+.download:hover .check1{
+    display: none;
+}
 /* 섹션5*/
 /* 섹션 5 이미지 & 애니메이션 */
 .moon {
