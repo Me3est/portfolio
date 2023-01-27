@@ -1,9 +1,0 @@
-.blink {
-    animation: blick 0.5s infinite;
-    font-size: 2.5rem;
-}
-@keyframes blick {
-    to {
-        opacity:0;
-    }
-}

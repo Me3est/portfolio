@@ -1,22 +1,25 @@
+/* 폰트 */
+@font-face {
+    font-family: '양진체';
+    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Choding_hope';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_02@1.0/Choding_hope.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 바디 전체 */
 html {
     overflow: hidden;
 }
-@font-face {
-    font-family: 'UhBeemysen';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    }
-    @font-face {
-        font-family: '양진체';
-        src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
 html, body {
     width: 100%;
     height: 100%;
 }
+/* 섹션 */
 .section {
     width: 100%;
     height: 100%;
@@ -25,48 +28,27 @@ html, body {
     overflow: hidden;
 }
 #section1 {
-    /* background:linear-gradient(#DEF5E5, #BCEAD5); */
     background:linear-gradient( #fff1c6,#f9d495);
     opacity: 0;
 }
 #section2 {
-    /* background:linear-gradient(#f9d495, #50bcdf); */
     background-color: #f9d495;
     position: relative;
 }
 #section3 {
-    /* background:linear-gradient(#50bcdf, #ffa762); */
     background: #50bcdf;
     font-family: '양진체';
 }
 #section4 {
-    /* background:linear-gradient(#ffa762, #b13f02); */
     background: #d76427;
-    font-family: '양진체';
-    
+    font-family: '양진체';  
 }
 #section5 {
     background:#000;
     font-family: '양진체';
 }
-.welcome_box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 60px;
-    font-weight: 700;
-    font-family: 'UhBeemysen';
-    color: #9cd4d8;
-    animation: welcome 3s linear;
-    opacity: 0;
-}
-@keyframes welcome {
-    0% { opacity: 0;}
-    50% {opacity: 1;}
-    100% { opacity: 0;}
-}
-/* section1 */
+/* 섹션1 */
+ /* 아이콘&애니메이션 */
 .airplane {
     width: 70px;
     height: 70px;
@@ -182,7 +164,6 @@ html, body {
     90% {right: 28%;top: 1%;}
     100% {right: 8%; top:7%;}
 }
-
 .down_arrow {
     animation: down 3s linear infinite;
 }
@@ -193,6 +174,24 @@ html, body {
     70% {opacity: 1;}
     100% {opacity: 0;}
 }
+/* 섹션1 내용 */
+.welcome_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Choding_hope';
+    color: #9cd4d8;
+    animation: welcome 3s linear;
+    opacity: 0;
+}
+@keyframes welcome {
+    0% { opacity: 0;}
+    50% {opacity: 1;}
+    100% { opacity: 0;}
+}
 .click_box {
     width: 465px;
     height: 270px;
@@ -201,7 +200,7 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     animation: later 3s linear;
-    font-family: 'UhBeemysen';
+    font-family: 'Choding_hope';
 }
 @keyframes later {
     0% {opacity: 0;}
@@ -244,7 +243,7 @@ html, body {
     font-weight: 700;
     text-align: center;
     animation: move 0.7s linear infinite;
-    font-family: 'UhBeemysen';
+    font-family: 'Choding_hope';
 }
 .here_click p {
     margin: 0;
@@ -267,7 +266,7 @@ html, body {
     text-align: center;
     color: #9cd4d8;
     font-weight: 700;
-    font-family: 'UhBeemysen'
+    font-family: 'Choding_hope'
 }
 .intro_box {
     position: absolute;
@@ -287,7 +286,8 @@ html, body {
 }
 .scroll_box p {
     margin: 5px 0;
-    font-size: 15px;
+    font-size: 25px;
+    font-family: 'Choding_hope';
     color: #fff;
 }
 .scroll_box img {
@@ -375,13 +375,13 @@ html, body {
     90% {transform:scale(-1) translateY(0px);}
     100% {transform:scale(-1) translateY(0px);}
 }
+/* 섹션2 제목 & 애니메이션 */
 .sec2_title_box {
     position: absolute;
     top: 12%;
     left: 78%;
     transition: all 0.7s;
 }
-
 .sec2_title_box span {
     display: inline-block;
     font-size: 45px;
@@ -412,15 +412,13 @@ html, body {
 .sec2_title_box span:nth-child(6) {
     animation: span1 2s 5s linear infinite;
 }
-/* .sec2_title_box span:nth-child(6) {
-    animation: span1 0.9s 0.5s linear infinite;
-} */
 @keyframes span1 {
     0% {transform: translateY(0px);}
     20% {transform: translateY(-0.2rem);}
     50% {transform:translateY(0px);}
     100% {transform: translateY(0px);}
 }
+/* 섹션2 내용 */
 .skills_box {
     max-width: 1000px;
     margin: 0 auto;
@@ -454,7 +452,7 @@ html, body {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    font-family: 'UhBeemysen';
+    font-family: 'Choding_hope';
     color: #9cd4d8;
 }
 .img_click_box {
@@ -495,7 +493,7 @@ html, body {
     font-weight: bold;
 }
 .display1 {display: block;}
-/* sec3 */
+/* 섹션3 */
 .port_box {
     width: 100%;
     max-width: 1100px;
@@ -523,22 +521,12 @@ html, body {
     opacity: 0;
     transition: all 0.5s;
 }
-/* .main_img::before {
-    content: "";
-    width: 3px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: -106px;
-    background: #555;
-} */
 .main_img img {
     width: 100%;
     height: 100%;
 }
 .main_info {
     width: 550px;
-    /* border: 1px solid; */
     padding: 0 30px;
     box-sizing: border-box;
     transform: translateY(-50px);
@@ -671,6 +659,7 @@ html, body {
     text-align: center;
     background: #50bcdf;
 }
+/* 섹션3 제목 & 애니메이션 */
 .sec3_title_box {
     position: absolute;
     top: 15%;
@@ -753,7 +742,8 @@ html, body {
     0% {right:15.5%; top: 78%; transform: scaleX(-1) rotate(270deg);}
     100% {right:15.5%; top: 11%;transform: scaleX(-1) rotate(270deg);}
 }
-/* sec4 */
+/* 섹션4 */
+/* 섹션4 이미지 & 애니메이션 */
 .sunflower {
     width: 110px;
     height:110px;
@@ -775,6 +765,7 @@ html, body {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
+/* 섹션4 내용 & 제목 */
 .about_box {
     width: 100%;
     max-width: 1200px;
@@ -835,7 +826,8 @@ html, body {
 .adu p:nth-child(2) {
     margin-top:10px;
 }
-/* sec5 */
+/* 섹션5*/
+/* 섹션 5 이미지 & 애니메이션 */
 .moon {
     width: 380px;
     height: 380px;
@@ -904,6 +896,7 @@ html, body {
     0% {right: 0%;}
     100% {right: 100%;}
 }
+/* 섹션5 제목 & 내용 */
 .contect {
     width: 100%;
     max-width: 1000px;
@@ -965,59 +958,43 @@ html, body {
 }
 .indi_active {
     color: #fff;
-    font-size: 45px;
+    font-size: 50px;
 }
-/* 인디케이터 반응형 */
-.indicator2 {
-    width: 100%;
-    height: 70px;
-    background: rgba(90, 90, 90, 0.096);
-    position: fixed;
-    top: 0;
-    display: none;
-    text-align: center;
+/* 타이핑 */
+.blink {
+    animation: blick 0.5s infinite;
+    font-size: 50px;
+    font-family: 'Choding_hope';
 }
-.indi_bar2 {
-    width: 235px;
-    float: left;
-    height: 100%;
-    color: rgb(88, 88, 88);
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 70px;
-    transition: all 0.5s;
-    font-family: '양진체';
+@keyframes blick {
+    to {
+        opacity:0;
+    }
 }
-.indi_active2 {
-    color: rgb(255, 255, 255);
-    font-size: 36px;
-}
+/* 반응형 */
 @media screen and (max-width:1660px) {
     .bicycle_img {display: none !important;}
 }
 @media screen and (max-width:1400px) {
+    .indicator {
+        bottom: 5px;
+    }
     .indi_bar {
-        font-size: 23px;
+        font-size: 19px;
+        line-height: 35px;
     }
     .indi_active {
         color: #fff;
-        font-size: 36px;
+        font-size: 28px;
     }
     .port_box {
-        width: 100%;
         max-width: 1050px;
-        height: 100%;
-        margin: 0 auto;
     }
     .actv {
         font-size: 27px;
-        font-weight: 700;
-        color: #555;
     }
     .main_title {
         font-size: 55px;
-        color: #50bcdf;
-        font-weight: 300;
     }
     .main_desc1 {
         font-size: 21px;

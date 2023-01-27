@@ -9,6 +9,3 @@ function typing() {
         i++
     }
 }
-$(document).ready(function() {
-    
-})
