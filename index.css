@@ -202,6 +202,7 @@ html, body {
     transform: translate(-50%, -50%);
     animation: later 3s linear;
     font-family: 'Choding_hope';
+    cusor:pointer;
 }
 @keyframes later {
     0% {opacity: 0;}
@@ -798,7 +799,7 @@ html, body {
     gap: 30px;
 }
 .con_box {
-    width: 350px;
+    width: 375px;
     text-align: center;
     color: #fff;
     font-size: 20px;
