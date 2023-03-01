@@ -271,6 +271,7 @@ html, body {
     font-family: 'Choding_hope'
 }
 .intro_box {
+    width: 575px;
     position: absolute;
     top: 46%;
     left: 50%;
@@ -746,6 +747,13 @@ html, body {
 }
 /* 섹션4 */
 /* 섹션4 이미지 & 애니메이션 */
+.sec4_img_box {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
 .sunflower {
     width: 110px;
     height:110px;
@@ -757,8 +765,8 @@ html, body {
     width: 30px;
     height: 30px;
     position: absolute;
-    bottom: 9%;
-    right: 8%;
+    bottom: 82%;
+    right: 63%;
     transform: scaleX(-1);
     opacity: 0;
     animation: smile 1.4s linear infinite;
@@ -1053,4 +1061,22 @@ html, body {
     .about_box {
         max-width: 1170px;
     }
+    .con_box {
+        width: 300px;
+    }
+    .sec3_title_box {
+        left: 78%;
+    }
+    .port_box {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .skills_box {
+        max-width: 910px;
+        padding: 0 16px;
+    }
+    .sec2_title_box {
+        left: 80%;
+    }
 }
+
