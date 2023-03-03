@@ -1078,5 +1078,8 @@ html, body {
     .sec2_title_box {
         left: 80%;
     }
+    .img_click_box img {
+        height: 80px;
+    }
 }
 
