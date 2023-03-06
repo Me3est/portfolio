@@ -47,11 +47,17 @@ html, body {
 }
 #section4 {
     background: #d76427;
-    font-family: '양진체';  
+    font-family: '양진체'; 
+    position: relative;
+    display: flex;
+    align-items: center; 
 }
 #section5 {
     background:#000;
     font-family: '양진체';
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 /* 섹션1 */
  /* 아이콘&애니메이션 */
@@ -488,7 +494,6 @@ html, body {
 }
 .port_box-margin p {margin: 0;}
 .main_img {
-    width: 350px;
     height: 450px;
     margin-top: 50px;
     position: relative;
@@ -501,7 +506,6 @@ html, body {
     height: 100%;
 }
 .main_info {
-    width: 550px;
     padding: 0 30px;
     box-sizing: border-box;
     transform: translateY(-50px);
@@ -559,7 +563,7 @@ html, body {
     justify-content: space-evenly;
 }
 .tool {
-    width: calc((100% - (1px * 5)) / 6);
+    width: calc((100% - (1px * 4)) / 5);
     height: 50px;
     border: 2px solid #fff;
     box-sizing: border-box;
@@ -750,7 +754,6 @@ html, body {
     border: 5px solid #fff;
     box-sizing: border-box;
     margin: 0 auto;
-    margin-top: 180px;
     transform: translateY(-50px);
     transition: all 0.5s;
     opacity: 0;
@@ -995,14 +998,12 @@ html, body {
         color: #fff;
         font-size: 28px;
     }
-    .port_box {
-        max-width: 1050px;
-    }
+   
     .actv {
         font-size: 27px;
     }
     .main_title {
-        font-size: 55px;
+        font-size: 45px;
     }
     .main_desc1 {
         font-size: 21px;
@@ -1019,20 +1020,80 @@ html, body {
     .sec2_main_box {
         max-width: 980px;
     }
+    .skill_box {
+        margin: 0px 0;
+    }
+    .sec3_main_box {
+        max-width: 875px;
+    }
 }
 @media screen and (max-width:1300px) {
     .sec2_main_box {
         max-width: 850px;
+    }
+    .sec3_main_box {
+        max-width: 770px;
+    }
+    .main_img {
+        height: 400px;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
 }
 @media screen and (max-width:1200px) {
     .sec2_main_box {
         max-width: 800px;
     }
+    .sec3_main_box {
+        max-width: 675px;
+    }
+    .about_box {
+        max-width: 795px;
+    }
+    .moon {
+        width: 315px;
+        height: 315px;
+    }
 }
 @media screen and (max-width:1100px) {
     .sec2_main_box {
         max-width: 700px;
+    }
+    .main_title {
+        font-size: 39px;
+    }
+    .actv {
+        font-size: 22px;
+    }
+    .main_desc1 {
+        font-size: 19px;
+    }
+    .main_desc1::before {
+        top: 21%;
+    }
+    .tools {
+        font-size: 19px;
+    }
+    .contents {
+        font-size: 19px;
+    }
+    .contents span {
+        font-size: 13px;
+    }
+    .days_answer {
+        line-height: 60px;
+        font-weight: 800;
+        font-size: 19px;
+        color: #646262;
+    }
+    .days::before {
+        top: 26%;
+    }
+    .contents::before {
+        top: 9%;
+    }
+    .tools::before {
+        top: 11%;
     }
 }
 /* @media screen and (max-width:1400px) {
