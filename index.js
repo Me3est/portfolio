@@ -100,7 +100,6 @@ $(document).ready(function() {
         if(s_top >= $('#section3').offset().top) {
             $('.main_info').css({transform:'translateY(0)', opacity:'1'})
             $('.main_img').css({transform:'translateX(0)', opacity:'1'})
-            // $('.sec3_title_box').css({top:'10%'})
             // $('.bicycle_img').css({display:'block'})
             $('.bicycle_img').fadeIn(1700, 'linear')
         }
