@@ -1051,12 +1051,12 @@ html, body {
 }
 @media screen and (max-width:1200px) {
     .sec2_img_box1 {
-        left: 12%;
+        left: 18%;
     }
     .sec2_img_box2 {
         position: absolute;
         bottom: 12%;
-        right: 12%;
+        right: 18%;
     }
     .about_box {
         max-width: 1170px;
@@ -1065,7 +1065,9 @@ html, body {
         width: 300px;
     }
     .sec3_title_box {
-        left: 78%;
+        left: 84%;
+        top: 24%;
+        transform: rotate(90deg);
     }
     .port_box {
         padding: 0 20px;
@@ -1081,5 +1083,34 @@ html, body {
     .img_click_box img {
         height: 80px;
     }
+    .skill_box {
+        margin: 10px 0;
+        height: 0px;
+    }
+    .skills_box {
+        max-width: 740px;
+        padding: 0 5px;
+    }
+    .port_box {
+        max-width: 950px;
+    }
+    .port_box-margin {
+        margin: 90px 0;
+        padding: 0px 0;
+    }
+    .main_img {
+        width: 300px;
+    }
+    .main_info {
+        width: 500px;
+        padding: 0 30px;
+    }
+    .tool {
+        width: calc((100% - (0px * 5)) / 6);
+        font-size: 11px;
+    }
+}
+@media screen and (max-width:990px) {
+    
 }
 
