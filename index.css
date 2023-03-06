@@ -35,10 +35,15 @@ html, body {
 #section2 {
     background-color: #f9d495;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 #section3 {
     background: #50bcdf;
     font-family: '양진체';
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 #section4 {
     background: #d76427;
@@ -300,33 +305,16 @@ html, body {
 }
 /* section2 */
 /* 이미지 */
-.sec2_img_box1 {
-    position: absolute;
-    top: 12%;
-    left: 25%;
-}
 .flower1 {
-    /* position: absolute;
-    top: 26.5%;
-    left: 20%; */
     animation: flower1 2.5s linear infinite;
 }
 .flower2 {
-    /* position: absolute;
-    top: 26.5%;
-    left: 23%; */
     animation: flower1 2.5s 0.5s linear infinite;
 }
 .flower3 {
-    /* position: absolute;
-    top: 26.5%;
-    left: 26%; */
     animation: flower1 2.5s 1s linear infinite;
 }
 .flower4 {
-    /* position: absolute;
-    top: 26.5%;
-    left: 29%; */
     animation: flower1 2.5s 1.5s linear infinite;
 }
 @keyframes flower1 {
@@ -338,28 +326,17 @@ html, body {
     100% {transform: translateY(0px);}
 }
 .sec2_img_box2 {
-    position: absolute;
-    bottom: 12%;
-    right: 25%;
+    text-align: right;
 }
 .flower5 {
-    /* position: absolute;
-    bottom: 26.5%;
-    right: 20%; */
     transform: scale(-1);
     animation: flower2 2.5s linear infinite;
 }
 .flower6 {
-    /* position: absolute;
-    bottom: 26.5%;
-    right: 23%; */
     transform: scale(-1);
     animation: flower2 2.5s 0.5s linear infinite;
 }
 .flower7 {
-    /* position: absolute;
-    bottom: 26.5%;
-    right: 26%; */
     transform: scale(-1);
     animation: flower2 2.5s 1s linear infinite;
 }
@@ -380,9 +357,6 @@ html, body {
 }
 /* 섹션2 제목 & 애니메이션 */
 .sec2_title_box {
-    position: absolute;
-    top: 12%;
-    left: 78%;
     transition: all 0.7s;
 }
 .sec2_title_box span {
@@ -394,9 +368,6 @@ html, body {
     text-align: center;
 }
 .sec2_title_box span:nth-child(1) {
-    position: absolute;
-    top: -6%;
-    left: -27%;
     animation: span1 2s linear infinite;
 }
 .sec2_title_box span:nth-child(2) {
@@ -422,15 +393,16 @@ html, body {
     100% {transform: translateY(0px);}
 }
 /* 섹션2 내용 */
-.skills_box {
-    max-width: 1000px;
-    margin: 0 auto;
+.sec2_move {
+    display: flex;
+    justify-content: space-between;
+}
+.sec2_main_box {
+    max-width: 1100px;
+    margin: 0px auto;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-10%, -50%);
-    transition: all 0.6s;
+}
+.skills_box {
     background: #fff;
     box-shadow: 0px 0px 4px #646262;
     border-radius: 6px;
@@ -441,7 +413,6 @@ html, body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin: 40px 0;
 }
 .skill {
     width:calc((100% - (20px * 3)) / 4);
@@ -497,15 +468,16 @@ html, body {
 }
 .display1 {display: block;}
 /* 섹션3 */
-.port_box {
+.sec3_main_box {
     width: 100%;
     max-width: 1100px;
-    height: 100%;
     margin: 0 auto;
+}
+.port_box {
+    position: relative;
 }
 .port_box-margin {
     width: 100%;
-    margin: 160px 0;
     padding: 20px 0;
     box-sizing: border-box;
     border-radius: 0 10px 0 10px;
@@ -664,10 +636,8 @@ html, body {
 }
 /* 섹션3 제목 & 애니메이션 */
 .sec3_title_box {
-    position: absolute;
-    top: 15%;
-    left:68%;
     transition: all 2s;
+    text-align: right;
 }
 .sec3_title_box span {
     display: inline-block;
@@ -685,9 +655,6 @@ html, body {
     text-align: center;
 }
 .sec3_title_box span:nth-child(1) {
-    position: absolute;
-    top: -6%;
-    left: -19%;
     animation: span1 2s linear infinite;
 }
 .sec3_title_box span:nth-child(2) {
@@ -718,32 +685,33 @@ html, body {
     50% {transform:translateY(0px);}
     100% {transform: translateY(0px);}
 }
+
 .bicycle_img {
     display: none;
     width: 150px;
     height: 70px;
     background: url(./img/icons8-bicycle-64.png) no-repeat center / contain;
     position: absolute;
-    top: 9%;
-    right: 32%;
+    top: -13%;
+    right: 18%;
     transform: scaleX(-1);
     animation: bicycle 7s 2s linear, bicycle2 5s 9s linear, bicycle3 7s 14s linear, bicycle4 5s 21s linear;
 }
 @keyframes bicycle {
-    0% {right: 32%;}
-    100% {right: 77%;}
+    0% {right: 18%;}
+    100% {right: 96%;}
 }
 @keyframes bicycle2 {
-    0% {right:77%; top: 9%; transform: scaleX(-1) rotate(90deg);}
-    100% {right:77%; top: 75%;transform: scaleX(-1) rotate(90deg);}
+    0% {right:96%; top: -13%; transform: scaleX(-1) rotate(90deg);}
+    100% {right:96%; top: 98%;transform: scaleX(-1) rotate(90deg);}
 }
 @keyframes bicycle3 {
-    0% {right:77%; top: 77%; transform: scaleX(-1) rotate(180deg);}
-    100% {right:15.5%; top: 77%;transform: scaleX(-1) rotate(180deg);}
+    0% {right:96%; top: 98%; transform: scaleX(-1) rotate(180deg);}
+    100% {right:-9%; top: 98%;transform: scaleX(-1) rotate(180deg);}
 }
 @keyframes bicycle4 {
-    0% {right:15.5%; top: 78%; transform: scaleX(-1) rotate(270deg);}
-    100% {right:15.5%; top: 11%;transform: scaleX(-1) rotate(270deg);}
+    0% {right:-9%; top: 98%; transform: scaleX(-1) rotate(270deg);}
+    100% {right:-9%; top: -13%;transform: scaleX(-1) rotate(270deg);}
 }
 /* 섹션4 */
 /* 섹션4 이미지 & 애니메이션 */
@@ -998,7 +966,7 @@ html, body {
 }
 .indi_active {
     color: #fff;
-    font-size: 50px;
+    font-size: 35px;
 }
 /* 타이핑 */
 .blink {
@@ -1048,8 +1016,26 @@ html, body {
     .days_title {
         font-size: 21px;
     }
+    .sec2_main_box {
+        max-width: 980px;
+    }
 }
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1300px) {
+    .sec2_main_box {
+        max-width: 850px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .sec2_main_box {
+        max-width: 800px;
+    }
+}
+@media screen and (max-width:1100px) {
+    .sec2_main_box {
+        max-width: 700px;
+    }
+}
+/* @media screen and (max-width:1400px) {
     .sec2_img_box1 {
         left: 18%;
     }
@@ -1156,8 +1142,5 @@ html, body {
         font-size: 19px;
     }
 
-}
-@media screen and (max-width:990px) {
-    
-}
+} */
 

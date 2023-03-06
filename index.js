@@ -94,8 +94,8 @@ $(document).ready(function() {
         }
         // 각 섹션의 스크롤 이벤트
         if(s_top >= $('#section1').offset().top) {
-            $('.skills_box').css({transform:'translate(-50%, -50%)'})
-            $('.sec2_title_box').css({left:'67%'})
+            // $('.skills_box').css({transform:'translate(-50%, -50%)'})
+            // $('.sec2_title_box').css({left:'67%'})
         }
         if(s_top >= $('#section3').offset().top) {
             $('.main_info').css({transform:'translateY(0)', opacity:'1'})
