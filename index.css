@@ -1049,7 +1049,7 @@ html, body {
         font-size: 21px;
     }
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1400px) {
     .sec2_img_box1 {
         left: 18%;
     }
@@ -1065,13 +1065,14 @@ html, body {
         width: 300px;
     }
     .sec3_title_box {
-        left: 84%;
+        left: 80%;
         top: 24%;
         transform: rotate(90deg);
     }
     .port_box {
         padding: 0 20px;
         box-sizing: border-box;
+        max-width: 800px;
     }
     .skills_box {
         max-width: 910px;
@@ -1088,18 +1089,24 @@ html, body {
         height: 0px;
     }
     .skills_box {
-        max-width: 740px;
+        max-width: 830px;
         padding: 0 5px;
+    }
+    .list_box {
+        margin: 10px 0;
     }
     .port_box {
         max-width: 950px;
     }
     .port_box-margin {
-        margin: 90px 0;
+        margin: 59px 0;
         padding: 0px 0;
     }
+    .skill > p {
+        margin: 0px 0;
+    }
     .main_img {
-        width: 300px;
+        width: 245px;
     }
     .main_info {
         width: 500px;
@@ -1109,6 +1116,46 @@ html, body {
         width: calc((100% - (0px * 5)) / 6);
         font-size: 11px;
     }
+    .moon {
+        width: 310px;
+        height: 310px;
+    }
+    .contect {
+        top: 60%;
+    }
+    .about_box {
+        margin-top: 70px;
+    }
+    .main_title {
+        font-size: 40px;
+
+    }
+    .actv {
+        font-size: 21px;
+    }
+    .main_desc1 {
+        font-size: 19px;
+        line-height: 50px;
+    }
+    .tools {
+        font-size: 19px;
+        line-height: 50px;
+    }
+    .contents {
+        font-size: 19px;
+    }
+    .contents span {
+        font-size: 16px;
+    }
+    .days_title {
+        font-size: 19px;
+        line-height: 50px;
+    }
+    .days_answer {
+        line-height: 50px;
+        font-size: 19px;
+    }
+
 }
 @media screen and (max-width:990px) {
     
