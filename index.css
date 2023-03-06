@@ -1049,7 +1049,7 @@ html, body {
         font-size: 21px;
     }
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1400px) {
     .sec2_img_box1 {
         left: 18%;
     }
