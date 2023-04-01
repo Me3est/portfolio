@@ -45,7 +45,7 @@ var scroll = function(){
     
     var wheel = function(e){
         if(e.originalEvent.wheelDelta < 0){
-            if(moveIndex < 4){
+            if(moveIndex < 5){
                 moveIndex += 1;
                 moving(moveIndex);
             };
@@ -100,14 +100,17 @@ $(document).ready(function() {
         if(s_top >= $('#section3').offset().top) {
             $('.main_info').css({transform:'translateY(0)', opacity:'1'})
             $('.main_img').css({transform:'translateX(0)', opacity:'1'})
-            // $('.bicycle_img').css({display:'block'})
             $('.bicycle_img').fadeIn(1700, 'linear')
         }
         if(s_top >= $('#section4').offset().top) {
-            $('.about_box').css({transform:'translateY(0)', opacity:'1'})
-            $('.sec4_title').css({transform:'translateY(0)', opacity:'1'})
+            $('.main_info2').css({transform:'translateY(0)', opacity:'1'})
+            $('.main_img2').css({transform:'translateX(0)', opacity:'1'})
         }
         if(s_top >= $('#section5').offset().top) {
+            $('.about_box').css({transform:'translateY(0)', opacity:'1'})
+            $('.sec5_title').css({transform:'translateY(0)', opacity:'1'})
+        }
+        if(s_top >= $('#section6').offset().top) {
             $('.contect').css({transform:'translate(-50%, -70%)', opacity:'1'})
             $('.item_s').css({transform:'translateY(0)', opacity:'1'})
         }
