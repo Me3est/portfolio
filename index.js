@@ -166,7 +166,7 @@ function count_up(i, num) {
 })
 // 타이핑 이벤트
 const $text = document.querySelector('.text');
-const letters = "도움을 줄 수 있는 \n 웹퍼블리셔가 되기위해 \n 공부중인 이유진 입니다.";
+const letters = "도움을 줄 수 있는 \n 웹퍼블리셔 되기위해 \n 공부중인 이유진 입니다.";
 let i = 0;
 
 function typing() {
